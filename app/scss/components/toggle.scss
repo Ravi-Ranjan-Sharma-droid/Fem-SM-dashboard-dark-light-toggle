@@ -1,0 +1,11 @@
+@use '../util/' as *;  // bcz rem things happen; i'm not good at scss :)
+
+
+.toggle{
+    &__button{
+        width: rem(16);
+        height: rem(16);
+        border-radius: 50%;
+        background-color: var(--Toggle);
+    }
+} 

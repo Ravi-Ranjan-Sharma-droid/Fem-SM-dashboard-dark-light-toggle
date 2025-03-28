@@ -2,9 +2,4 @@
 @function rem($pixels, $context: 16){
     @return ($pixels / $context) * 1rem;
 }
-h1{
-    font-size: rem(30);  // 16px --> 1rem
-}
-h1{
-    font-size: 1.875rem;
-}
+
