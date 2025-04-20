@@ -1,0 +1,34 @@
+{
+  "name": "frontend-mentor-p",
+  "version": "1.0.0",
+  "description": "![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ravi-Ranjan-Sharma-droid/Fem-SM-dashboard-dark-light-toggle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ravi-Ranjan-Sharma-droid/Fem-SM-dashboard-dark-light-toggle/issues"
+  },
+  "homepage": "https://github.com/Ravi-Ranjan-Sharma-droid/Fem-SM-dashboard-dark-light-toggle#readme",
+  "dependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^7.0.6",
+    "dart-sass": "^1.25.0",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.5.3"
+  }
+}
