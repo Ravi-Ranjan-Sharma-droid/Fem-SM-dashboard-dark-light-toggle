@@ -1,11 +1,20 @@
-@use '../util/' as *;  // bcz rem things happen; i'm not good at scss :)
+@use "../util/" as *; // bcz rem things happen; i'm not good at scss :)
 
+.toggle {
+  border: none;
 
-.toggle{
-    &__button{
-        width: rem(16);
-        height: rem(16);
-        border-radius: 50%;
-        background-color: var(--Toggle);
-    }
-} 
+  &__wrapper {
+  }
+  input[type="radio"] {
+  }
+
+  &__backgroud &__button {
+    width: rem(16);
+    height: rem(16);
+    border-radius: 50%;
+    background-color: var(--Toggle);
+  }
+  labek{
+    
+}
+}
