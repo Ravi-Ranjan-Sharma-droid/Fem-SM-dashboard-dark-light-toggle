@@ -1,5 +1,90 @@
-@use '../util/' as *; // rem things
+@use "../util/" as *; // rem things
 
 .card {
-  padding: rem(20);
+  background: var(--dark-card);
+  color: var(--dark-text1);
+  width: rem(255); // fix it later
+  text-align: center;
+  padding: rem(25);
+
+  &--facebook {
+  }
+
+  &--twitter {
+  }
+
+  &--instagram {
+  }
+
+  &--youtube {
+  }
+
+  &__platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(28);
+  }
+
+  &__icon {
+    margin-right: 8px;
+
+    &--facebook {
+    }
+
+    &--twitter {
+    }
+
+    &--instagram {
+    }
+
+    &--youtube {
+    }
+  }
+
+  &__username {
+    font-size: rem(12);
+    font-weight: 700;
+  }
+
+  &__followers{
+    margin-bottom: rem(25);
+  } 
+
+  &__count {
+    color: var(--light-bg);
+    font-weight: 700;
+    letter-spacing: rem(-2);
+    line-height: 1;
+    margin-bottom: rem(4);
+
+    &--big {
+      font-size: rem(56);
+    }
+
+    &--small {
+    }
+  }
+
+  &__label {
+    color: var(--dark-text1);
+    font-size: rem(12);
+    letter-spacing: rem(5);
+    font-weight: 400;
+    text-transform: uppercase;
+
+  }
+
+  &__change {
+    font-size: rem(12);
+    font-weight: 700;
+
+    &--up {
+      color: var(--LimeGreen);
+    }
+
+    &--down {
+      color: var(--BrightRed);
+    }
+  }
 }
