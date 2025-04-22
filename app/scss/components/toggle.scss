@@ -1,20 +1,57 @@
 @use "../util/" as *; // bcz rem things happen; i'm not good at scss :)
+// https://codepen.io/SaraSoueidan/pen/jpBbrq/?editors=1100
 
 .toggle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   border: none;
+  gap: rem(12);
+
+  label {
+    &[for="dark"] {
+      grid-column: 1/2;
+      justify-self: end;
+    }
+
+    &[for="system"] {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      justify-self: center;
+    }
+
+    &[for="light"] {
+      grid-column: 3/4;
+    }
+  }
 
   &__wrapper {
-  }
-  input[type="radio"] {
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: rem(24);
   }
 
-  &__backgroud &__button {
+  input[type="radio"] {
+    opacity: 0; //
+  }
+
+  &__background {
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border-radius: rem(12);
+    background: linear-gradient(225deg,
+        var(--Toggle-bg-end) 0%,
+        var(--Toggle-bg-start) 98.02%);
+  }
+
+  &__button {  
     width: rem(16);
     height: rem(16);
     border-radius: 50%;
     background-color: var(--Toggle);
   }
-  labek{
-    
-}
 }
