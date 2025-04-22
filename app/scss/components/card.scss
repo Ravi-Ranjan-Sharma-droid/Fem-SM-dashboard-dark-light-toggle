@@ -1,9 +1,22 @@
 @use "../util/" as *; // rem things
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(30);
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .card {
   background: var(--dark-card);
   color: var(--dark-text1);
-  width: rem(255); // fix it later
   text-align: center;
   padding: rem(25);
   border-radius: rem(5);
@@ -49,9 +62,9 @@
     font-weight: 700;
   }
 
-  &__followers{
+  &__followers {
     margin-bottom: rem(25);
-  } 
+  }
 
   &__count {
     color: var(--light-bg);
@@ -74,7 +87,6 @@
     letter-spacing: rem(5);
     font-weight: 400;
     text-transform: uppercase;
-
   }
 
   &__change {
@@ -92,11 +104,11 @@
       color: var(--BrightRed);
     }
 
-    img{
+    img {
       margin-right: rem(4);
     }
   }
 
-  &__number{
+  &__number {
   }
 }
