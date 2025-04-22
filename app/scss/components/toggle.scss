@@ -34,7 +34,9 @@
 
   input[type="radio"] {
     opacity: 0; 
-    margin: 0;
+    margin: 0 rem(-2);
+    width: rem(20);
+    height: rem(24);
   }
 
   &__background {
@@ -47,6 +49,7 @@
     background: linear-gradient(225deg,
         var(--Toggle-bg-end) 0%,
         var(--Toggle-bg-start) 98.02%);
+        pointer-events: none;
   }
 
   &__button {  
@@ -58,6 +61,18 @@
     height: rem(18);
     border-radius: 50%;
     background-color: var(--dark-bg);
-    
+    transition: all 150ms ease-in-out;
+
+  }
+
+  #light:checked ~ .toggle__button{
+    left: calc(100% - rem(21));
+    right: rem(3);
+  }
+
+  #system:checked ~ .toggle__button{
+    left: 50%;
+    right: auto;
+    transform: translate(-50%);
   }
 }
