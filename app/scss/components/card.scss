@@ -63,25 +63,25 @@
     margin-bottom: rem(28);
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: rem(12);
     font-weight: 700;
-  } 
+  }
 
   &__icon {
     margin-right: 8px;
 
-    &--facebook {
-    }
+    //   &--facebook {
+    //   }
 
-    &--twitter {
-    }
+    //   &--twitter {
+    //   }
 
-    &--instagram {
-    }
+    //   &--instagram {
+    //   }
 
-    &--youtube {
-    }
+    //   &--youtube {
+    //   }
   }
 
   &__username {
@@ -106,7 +106,6 @@
 
     &--small {
       font-size: rem(32);
-      
     }
   }
 
@@ -138,6 +137,6 @@
     }
   }
 
-  &__number {
-  }
+  // &__number {
+  // }
 }
