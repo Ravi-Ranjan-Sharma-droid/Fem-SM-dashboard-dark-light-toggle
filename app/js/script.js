@@ -12,23 +12,39 @@ the last value saved on the local storage is loaded.
 const darkButton = document.getElementById("dark");
 const lightButton = document.getElementById("light");
 
-// Add transition class to body
+// Enhance transitions for a smoother visual experience
 const addTransition = () => {
   const body = document.querySelector("body");
-  body.style.transition = "background-color 0.5s ease, color 0.5s ease";
+  body.style.transition =
+    "background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s ease-out";
+  body.style.willChange = "background-color, color, transform";
+};
+
+const animateBody = () => {
+  const body = document.querySelector("body");
+  body.style.transform = "scale(1.02)";
+  body.style.opacity = "0.9";
+  setTimeout(() => {
+    body.style.transform = "scale(1)";
+    body.style.opacity = "1";
+  }, 300);
 };
 
 const setDarkMode = () => {
   const body = document.querySelector("body");
   addTransition();
-  body.classList = "dark";
+  animateBody();
+  body.classList.remove("light");
+  body.classList.add("dark");
   localStorage.setItem("colorMode", "dark");
 };
 
 const setLightMode = () => {
   const body = document.querySelector("body");
   addTransition();
-  body.classList = "light";
+  animateBody();
+  body.classList.remove("dark");
+  body.classList.add("light");
   localStorage.setItem("colorMode", "light");
 };
 
@@ -39,30 +55,25 @@ const colorModeFromLocalStorage = () => {
 const colorModeFromPreferences = () => {
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
-    : "light"; // If preference is set or does not match anything (light is default)
+    : "light";
 };
 
 const loadAndUpdateColor = () => {
-  // local storage has precedence over the prefers-color-scheme
   const color = colorModeFromLocalStorage() || colorModeFromPreferences();
-  color == "dark" ? darkButton.click() : lightButton.click();
+  color === "dark" ? darkButton.click() : lightButton.click();
 };
 
-// when the inputs are clicked, check which radio button is checked and change the color
 const radioButtons = document.querySelectorAll(".toggle__wrapper input");
 radioButtons.forEach((button) => {
-  button.addEventListener("click", (event) => {
+  button.addEventListener("click", () => {
     darkButton.checked ? setDarkMode() : setLightMode();
   });
 });
 
-// when the prefers-color-scheme changes, this event will be emitted
-// event reflects the media query, if it matches, the new color is dark, else it is light
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", (event) => {
     event.matches ? darkButton.click() : lightButton.click();
   });
 
-// Load the right color on startup - localStorage has precedence
 loadAndUpdateColor();
