@@ -17,7 +17,7 @@
 .card {
   position: relative;
   overflow: hidden;
-  background: var(--dark-card);
+  background: var(--card-bg);
   color: var(--dark-text1);
   text-align: center;
   padding: rem(25);
@@ -26,15 +26,15 @@
   cursor: pointer;
 
   &:hover{
-    background: var(--dark-card-hover);
+    background: var(--card-hover);
   }
 
   &--facebook {
-    border-top: rem(5) solid var(--Facebook);
+    border-top: rem(5) solid var(--facebook);
   }
 
   &--twitter {
-    border-top: rem(5) solid var(--Twitter);
+    border-top: rem(5) solid var(--twitter);
   }
 
   &--instagram {
@@ -49,15 +49,15 @@
       width: 100%;
       background: linear-gradient(
         225deg,
-        var(--Instagram-end),
-        var(--Instagram-middle) 50.91%,
-        var(--Instagram-start) 100%
+        var(--instagram-end),
+        var(--instagram-middle) 50.91%,
+        var(--instagram-start) 100%
       );
     }
   }
 
   &--youtube {
-    border-top: rem(5) solid var(--YouTube);
+    border-top: rem(5) solid var(--youtube);
   }
 
   &__platform {
@@ -93,6 +93,7 @@
   &__username {
     font-size: rem(12);
     font-weight: 700;
+    color: var(--text-color2);
   }
 
   &__followers {
@@ -100,7 +101,7 @@
   }
 
   &__count {
-    color: var(--light-bg);
+    color: var(--text-color);
     font-weight: 700;
     letter-spacing: rem(-2);
     line-height: 1;
@@ -131,11 +132,11 @@
     justify-content: center;
 
     &--up {
-      color: var(--LimeGreen);
+      color: var(--limeGreen);
     }
 
     &--down {
-      color: var(--BrightRed);
+      color: var(--brightRed);
     }
 
     img {
